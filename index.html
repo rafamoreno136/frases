@@ -72,7 +72,30 @@
       { text: "Un viaje de mil millas comienza con un solo paso.", author: "Lao Tse" },
       { text: "No es más rico quien más tiene, sino quien menos necesita.", author: "Buda" },
       { text: "El odio no cesa con el odio, sino con amor. Esta es la ley eterna.", author: "Buda" },
-      { text: "Conocer a otros es sabiduría, conocerse a sí mismo es iluminación.", author: "Lao Tse" }
+      { text: "Conocer a otros es sabiduría, conocerse a sí mismo es iluminación.", author: "Lao Tse" },
+      { text: "El dolor es inevitable, el sufrimiento es opcional.", author: "Buda" },
+      { text: "La naturaleza no se apresura, y sin embargo todo se cumple.", author: "Lao Tse" },
+      { text: "Permítete ser imperfecto; en la aceptación está la paz.", author: "Anónimo" },
+      { text: "Cuando dejo de ser lo que soy, me convierto en lo que podría ser.", author: "Lao Tse" },
+      { text: "La felicidad no depende de lo que tienes, sino de quién eres.", author: "Buda" },
+      { text: "Libérate de la rigidez; la flexibilidad abre caminos.", author: "Anónimo" },
+      { text: "El esfuerzo de hoy es suficiente; no necesitas hacer más.", author: "Anónimo" },
+      { text: "El camino no es el cielo, sino el corazón abierto.", author: "Buda" },
+      { text: "La simplicidad, la paciencia y la compasión son tus mayores tesoros.", author: "Lao Tse" },
+      { text: "No tienes que tener todo bajo control para encontrar paz.", author: "Anónimo" },
+      { text: "La verdadera felicidad no se encuentra en el egoísmo, sino en el amor y la bondad.", author: "Buda" },
+      { text: "Ser profundamente amado te da fuerzas; amar profundamente te da valor.", author: "Lao Tse" },
+      { text: "Acepta los errores como oportunidades para aprender, no como fracasos.", author: "Anónimo" },
+      { text: "El que sabe no habla. El que habla no sabe.", author: "Lao Tse" },
+      { text: "En la confrontación entre el arroyo y la roca, el arroyo siempre gana, no por fuerza, sino por perseverancia.", author: "Buda" },
+      { text: "La compasión por ti mismo es tan importante como la compasión por los demás.", author: "Anónimo" },
+      { text: "Aquel que sigue el camino natural sabe cuándo detenerse.", author: "Lao Tse" },
+      { text: "El dolor es inevitable, pero el sufrimiento es opcional.", author: "Buda" },
+      { text: "Es suficiente ser tú mismo; no necesitas ser perfecto.", author: "Anónimo" },
+      { text: "El odio no cesa con el odio, sino con el amor.", author: "Buda" },
+      { text: "Lo que crees que es imperfección es lo que te hace humano.", author: "Anónimo" },
+      { text: "En la quietud del presente encuentras lo que estás buscando.", author: "Anónimo" },
+      { text: "Conquista la ira con la calma, la maldad con la bondad.", author: "Buda" }
     ];
 
     let currentPhraseIndex = 0;
@@ -95,9 +118,6 @@
       currentPhraseIndex = (currentPhraseIndex - 1 + phrases.length) % phrases.length;
       displayPhrase(currentPhraseIndex);
     }
-
-    nextButton.addEventListener("click", showNextPhrase);
-    prevButton.addEventListener("click", showPrevPhrase);
 
     // Mostrar la primera frase al cargar
     displayPhrase(currentPhraseIndex);
