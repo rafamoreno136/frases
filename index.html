@@ -106,7 +106,7 @@
 
     function displayPhrase(index) {
       phraseText.textContent = `"${phrases[index].text}"`;
-      phraseAuthor.textContent = phrases[index].author; // Sin el guion antes del autor
+      phraseAuthor.textContent = phrases[index].author; // Eliminar guion antes del autor
     }
 
     function showNextPhrase() {
@@ -118,6 +118,9 @@
       currentPhraseIndex = (currentPhraseIndex - 1 + phrases.length) % phrases.length;
       displayPhrase(currentPhraseIndex);
     }
+
+    nextButton.addEventListener("click", showNextPhrase);
+    prevButton.addEventListener("click", showPrevPhrase);
 
     // Mostrar la primera frase al cargar
     displayPhrase(currentPhraseIndex);
