@@ -98,7 +98,7 @@
       { text: "Conquista la ira con la calma, la maldad con la bondad.", author: "Buda" }
     ];
 
-    let currentPhraseIndex = 0;
+    let currentPhraseIndex = Math.floor(Math.random() * phrases.length); // Generar índice aleatorio al cargar
     const phraseText = document.getElementById("phrase-text");
     const phraseAuthor = document.getElementById("phrase-author");
     const prevButton = document.getElementById("prev-phrase");
@@ -106,7 +106,7 @@
 
     function displayPhrase(index) {
       phraseText.textContent = `"${phrases[index].text}"`;
-      phraseAuthor.textContent = phrases[index].author; // Eliminar guion antes del autor
+      phraseAuthor.textContent = phrases[index].author;
     }
 
     function showNextPhrase() {
@@ -122,7 +122,7 @@
     nextButton.addEventListener("click", showNextPhrase);
     prevButton.addEventListener("click", showPrevPhrase);
 
-    // Mostrar la primera frase al cargar
+    // Mostrar una frase aleatoria al cargar
     displayPhrase(currentPhraseIndex);
   </script>
 </body>
